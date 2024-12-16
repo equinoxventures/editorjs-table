@@ -20,11 +20,12 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "prepare": "npm run build",
     "lint": "eslint -c ./.eslintrc --ext .js --fix ."
   },
   "author": {
     "name": "Equinox Ventures",
-    "email": "team@eqx.vc"
+    "email": "teams@eqx.vc"
   },
   "keywords": [
     "codex",

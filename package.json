@@ -1,9 +1,9 @@
 {
-  "name": "@editorjs/table",
+  "name": "@equinoxventures/editorjs-table",
   "description": "Table for Editor.js",
   "version": "2.4.3",
   "license": "MIT",
-  "repository": "https://github.com/editor-js/table",
+  "repository": "https://github.com/equinoxventures/editorjs-table",
   "files": [
     "dist"
   ],
@@ -23,8 +23,8 @@
     "lint": "eslint -c ./.eslintrc --ext .js --fix ."
   },
   "author": {
-    "name": "CodeX Team",
-    "email": "team@ifmo.su"
+    "name": "Equinox Ventures",
+    "email": "team@eqx.vc"
   },
   "keywords": [
     "codex",

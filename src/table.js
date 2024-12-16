@@ -625,7 +625,6 @@ export default class Table {
    * @param {HTMLElement} targetRow - the row to copy the width to
    */
   copyColumnWidthsFromBlueprint(blueprintRow, targetRow) {
-    console.log('copyColumnWidthsFromBlueprint', blueprintRow, targetRow);
     if (!blueprintRow || !targetRow) {
       return;
     }

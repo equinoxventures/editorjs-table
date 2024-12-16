@@ -601,7 +601,7 @@ class $ {
    * @param {HTMLElement} targetRow - the row to copy the width to
    */
   copyColumnWidthsFromBlueprint(t, e) {
-    if (console.log("copyColumnWidthsFromBlueprint", t, e), !t || !e)
+    if (!t || !e)
       return;
     const o = t.querySelectorAll(`.${l.cell}`), i = e.querySelectorAll(`.${l.cell}`);
     o.forEach((r, s) => {

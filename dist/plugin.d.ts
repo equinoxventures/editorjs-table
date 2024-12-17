@@ -13,9 +13,9 @@ import { default as Table } from './table';
  */
 /**
  * @typedef {object} TableConfig - object with the data transferred to form a table
- * @property {boolean} withHeading - setting to use cells of the first row as headings
- * @property {string[]} presetColors - array of preset colors
- * @property {string[][]} content - two-dimensional array which contains table content
+ * @property {boolean} [withHeading] - setting to use cells of the first row as headings
+ * @property {string[]} [presetColors] - array of preset colors
+ * @property {(string|TableCell)[][]} content - two-dimensional array which contains table content
  */
 /**
  * @typedef {object} TableConstructor
@@ -23,6 +23,13 @@ import { default as Table } from './table';
  * @property {TableConfig} config - user config for Tool
  * @property {object} api - Editor.js API
  * @property {boolean} readOnly - read-only mode flag
+ */
+/**
+ * @typedef {object} TableCell
+ * @description Data per table cell
+ * @property {string} content - string content for table
+ * @property {string} backgroundColor - color of the cell
+ * @property {float} width - relative width of the cell ( 1 == 1fr)
  */
 /**
  * @typedef {import('@editorjs/editorjs').PasteEvent} PasteEvent
@@ -75,7 +82,7 @@ export default class TableBlock {
     data: {
         withHeadings: any;
         stretched: any;
-        content: string[][];
+        content: any[][];
     };
     table: Table;
     block: any;
@@ -183,21 +190,21 @@ export type TableConfig = {
     /**
      * - setting to use cells of the first row as headings
      */
-    withHeading: boolean;
+    withHeading?: boolean;
     /**
      * - array of preset colors
      */
     /**
      * - array of preset colors
      */
-    presetColors: string[];
+    presetColors?: string[];
     /**
      * - two-dimensional array which contains table content
      */
     /**
      * - two-dimensional array which contains table content
      */
-    content: string[][];
+    content: (string | TableCell)[][];
 };
 export type TableConstructor = {
     /**
@@ -229,4 +236,5 @@ export type TableConstructor = {
      */
     readOnly: boolean;
 };
+export type TableCell = object;
 export type PasteEvent = any;

@@ -621,7 +621,7 @@ class $ {
       i.remove();
     }
     const e = this.wrapper.querySelector(`.${l.addColumn}`);
-    e && e.classList.remove(l.addColumnDisabled);
+    e && e.classList.remove(l.addColumnDisabled), this.adjustColumnWidths();
   }
   /**
    * Delete a row by index

@@ -3,7 +3,7 @@ import { default as Toolbox } from './toolbox';
  * @typedef {object} TableConfig
  * @description Tool's config from Editor
  * @property {boolean} withHeadings — Uses the first line as headings
- * @property {TableCell[][]} withHeadings — two-dimensional array with table contents
+ * @property {TableCell[][]} content — two-dimensional array with table contents
  * @property {string[]} presetColors - array of preset colors
  */
 /**

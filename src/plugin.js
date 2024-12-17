@@ -16,9 +16,9 @@ import { IconTable, IconTableWithHeadings, IconTableWithoutHeadings, IconStretch
  */
 /**
  * @typedef {object} TableConfig - object with the data transferred to form a table
- * @property {boolean} withHeading - setting to use cells of the first row as headings
- * @property {string[]} presetColors - array of preset colors
- * @property {string[][]} content - two-dimensional array which contains table content
+ * @property {boolean} [withHeading] - setting to use cells of the first row as headings
+ * @property {string[]} [presetColors] - array of preset colors
+ * @property {(string|TableCell)[][]} content - two-dimensional array which contains table content
  */
 /**
  * @typedef {object} TableConstructor
@@ -27,6 +27,15 @@ import { IconTable, IconTableWithHeadings, IconTableWithoutHeadings, IconStretch
  * @property {object} api - Editor.js API
  * @property {boolean} readOnly - read-only mode flag
  */
+
+/**
+ * @typedef {object} TableCell
+ * @description Data per table cell
+ * @property {string} content - string content for table
+ * @property {string} backgroundColor - color of the cell
+ * @property {float} width - relative width of the cell ( 1 == 1fr)
+ */
+
 /**
  * @typedef {import('@editorjs/editorjs').PasteEvent} PasteEvent
  */

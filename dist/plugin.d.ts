@@ -1,37 +1,5 @@
 import { default as Table } from './table';
 /**
- * @typedef {object} TableData - configuration that the user can set for the table
- * @property {number} rows - number of rows in the table
- * @property {number} cols - number of columns in the table
- */
-/**
- * @typedef {object} Tune - setting for the table
- * @property {string} name - tune name
- * @property {HTMLElement} icon - icon for the tune
- * @property {boolean} isActive - default state of the tune
- * @property {void} setTune - set tune state to the table data
- */
-/**
- * @typedef {object} TableConfig - object with the data transferred to form a table
- * @property {boolean} [withHeading] - setting to use cells of the first row as headings
- * @property {string[]} [presetColors] - array of preset colors
- * @property {(string|TableCell)[][]} content - two-dimensional array which contains table content
- */
-/**
- * @typedef {object} TableConstructor
- * @property {TableConfig} data — previously saved data
- * @property {TableConfig} config - user config for Tool
- * @property {object} api - Editor.js API
- * @property {boolean} readOnly - read-only mode flag
- */
-/**
- * @typedef {object} TableCell
- * @description Data per table cell
- * @property {string} content - string content for table
- * @property {string} backgroundColor - color of the cell
- * @property {float} width - relative width of the cell ( 1 == 1fr)
- */
-/**
  * @typedef {import('@editorjs/editorjs').PasteEvent} PasteEvent
  */
 /**
@@ -76,16 +44,16 @@ export default class TableBlock {
      * @param {TableConstructor} init
      */
     constructor({ data, config, api, readOnly, block }: TableConstructor);
-    api: any;
-    readOnly: boolean;
-    config: TableConfig;
+    api: TableConstructor;
+    readOnly: TableConstructor;
+    config: TableConstructor;
     data: {
         withHeadings: any;
         stretched: any;
-        content: any[][];
+        content: any;
     };
     table: Table;
-    block: any;
+    block: TableConstructor;
     /**
      * Return Tool's view
      *
@@ -128,113 +96,4 @@ export default class TableBlock {
      */
     onPaste(event: PasteEvent): void;
 }
-/**
- * - configuration that the user can set for the table
- */
-export type TableData = {
-    /**
-     * - number of rows in the table
-     */
-    /**
-     * - number of rows in the table
-     */
-    rows: number;
-    /**
-     * - number of columns in the table
-     */
-    /**
-     * - number of columns in the table
-     */
-    cols: number;
-};
-/**
- * - setting for the table
- */
-export type Tune = {
-    /**
-     * - tune name
-     */
-    /**
-     * - tune name
-     */
-    name: string;
-    /**
-     * - icon for the tune
-     */
-    /**
-     * - icon for the tune
-     */
-    icon: HTMLElement;
-    /**
-     * - default state of the tune
-     */
-    /**
-     * - default state of the tune
-     */
-    isActive: boolean;
-    /**
-     * - set tune state to the table data
-     */
-    /**
-     * - set tune state to the table data
-     */
-    setTune: void;
-};
-/**
- * - object with the data transferred to form a table
- */
-export type TableConfig = {
-    /**
-     * - setting to use cells of the first row as headings
-     */
-    /**
-     * - setting to use cells of the first row as headings
-     */
-    withHeading?: boolean;
-    /**
-     * - array of preset colors
-     */
-    /**
-     * - array of preset colors
-     */
-    presetColors?: string[];
-    /**
-     * - two-dimensional array which contains table content
-     */
-    /**
-     * - two-dimensional array which contains table content
-     */
-    content: (string | TableCell)[][];
-};
-export type TableConstructor = {
-    /**
-     * — previously saved data
-     */
-    /**
-     * — previously saved data
-     */
-    data: TableConfig;
-    /**
-     * - user config for Tool
-     */
-    /**
-     * - user config for Tool
-     */
-    config: TableConfig;
-    /**
-     * - Editor.js API
-     */
-    /**
-     * - Editor.js API
-     */
-    api: object;
-    /**
-     * - read-only mode flag
-     */
-    /**
-     * - read-only mode flag
-     */
-    readOnly: boolean;
-};
-export type TableCell = object;
 export type PasteEvent = any;

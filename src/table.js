@@ -30,11 +30,10 @@ const CSS = {
 };
 
 /**
- * @typedef {object} TableConfig
- * @description Tool's config from Editor
- * @property {boolean} withHeadings — Uses the first line as headings
- * @property {TableCell[][]} content — two-dimensional array with table contents
- * @property {string[]} presetColors - array of preset colors
+ * @typedef {object} TableConfig - object with the data transferred to form a table
+ * @property {boolean} [withHeadings] - setting to use cells of the first row as headings
+ * @property {string[]} [presetColors] - array of preset colors
+ * @property {(string|TableCell)[][]} content - two-dimensional array which contains table content
  */
 
 /**
@@ -46,11 +45,11 @@ const CSS = {
  */
 
 /**
- * @typedef {object} TableData - object with the data transferred to form a table
- * @property {number} rows - number of rows in the table
- * @property {number} cols - number of columns in the table
+ * @typedef {object} TableData - configuration that the user can set for the table
+ * @property {boolean} withHeadings - whether the table has header rows
+ * @property {boolean} stretched - whether the table is stretched to full width
+ * @property {(string|TableCell)[][]} content - two-dimensional array of table content
  */
-
 
 /**
  * Generates and manages table contents.
@@ -289,8 +288,9 @@ export default class Table {
 
   setCellWidth({row, column, adjustedWidth = 0, defaultWidth = 1}) {
     const cell = this.getCell(row, column);
-    const width = parseFloat(cell.dataset.width) || defaultWidth;
-    cell.dataset.width = Math.max(width + adjustedWidth, 0.1);
+    const width = parseFloat(cell.dataset.width) || parseFloat(defaultWidth);
+
+    cell.dataset.width = Math.max(width + parseFloat(adjustedWidth), 0.1);
   }
 
   /**
@@ -771,11 +771,11 @@ export default class Table {
           const cellData = data.content[i][j];
           if (typeof cellData === 'object') {
             this.setCellContent(i + 1, j + 1, cellData.content);
-            this.setCellBackgroundColor(i + 1, j + 1, cellData.backgroundColor);
             this.setCellWidth({ row: i+1, column: j+1, defaultWidth: cellData.width })
           } else {
             this.setCellContent(i + 1, j + 1, data.content[i][j]);
           }
+          this.setCellBackgroundColor(i + 1, j + 1, cellData.backgroundColor || this.config.defaultBackgroundColor);
         }
       }
       this.adjustColumnWidths();

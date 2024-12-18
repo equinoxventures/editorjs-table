@@ -1,10 +1,9 @@
 import { default as Toolbox } from './toolbox';
 /**
- * @typedef {object} TableConfig
- * @description Tool's config from Editor
- * @property {boolean} withHeadings — Uses the first line as headings
- * @property {TableCell[][]} content — two-dimensional array with table contents
- * @property {string[]} presetColors - array of preset colors
+ * @typedef {object} TableConfig - object with the data transferred to form a table
+ * @property {boolean} [withHeadings] - setting to use cells of the first row as headings
+ * @property {string[]} [presetColors] - array of preset colors
+ * @property {(string|TableCell)[][]} content - two-dimensional array which contains table content
  */
 /**
  * @typedef {object} TableCell
@@ -14,9 +13,10 @@ import { default as Toolbox } from './toolbox';
  * @property {float} width - relative width of the cell ( 1 == 1fr)
  */
 /**
- * @typedef {object} TableData - object with the data transferred to form a table
- * @property {number} rows - number of rows in the table
- * @property {number} cols - number of columns in the table
+ * @typedef {object} TableData - configuration that the user can set for the table
+ * @property {boolean} withHeadings - whether the table has header rows
+ * @property {boolean} stretched - whether the table is stretched to full width
+ * @property {(string|TableCell)[][]} content - two-dimensional array of table content
  */
 /**
  * Generates and manages table contents.
@@ -35,7 +35,7 @@ export default class Table {
     readOnly: boolean;
     api: any;
     data: TableData;
-    config: any;
+    config: TableConfig;
     /**
      * DOM nodes
      */
@@ -401,24 +401,56 @@ export default class Table {
      */
     destroy(): void;
 }
-export type TableConfig = object;
-export type TableCell = object;
 /**
  * - object with the data transferred to form a table
  */
+export type TableConfig = {
+    /**
+     * - setting to use cells of the first row as headings
+     */
+    /**
+     * - setting to use cells of the first row as headings
+     */
+    withHeadings?: boolean;
+    /**
+     * - array of preset colors
+     */
+    /**
+     * - array of preset colors
+     */
+    presetColors?: string[];
+    /**
+     * - two-dimensional array which contains table content
+     */
+    /**
+     * - two-dimensional array which contains table content
+     */
+    content: (string | TableCell)[][];
+};
+export type TableCell = object;
+/**
+ * - configuration that the user can set for the table
+ */
 export type TableData = {
     /**
-     * - number of rows in the table
+     * - whether the table has header rows
      */
     /**
-     * - number of rows in the table
+     * - whether the table has header rows
      */
-    rows: number;
+    withHeadings: boolean;
     /**
-     * - number of columns in the table
+     * - whether the table is stretched to full width
      */
     /**
-     * - number of columns in the table
+     * - whether the table is stretched to full width
      */
-    cols: number;
+    stretched: boolean;
+    /**
+     * - two-dimensional array of table content
+     */
+    /**
+     * - two-dimensional array of table content
+     */
+    content: (string | TableCell)[][];
 };

@@ -538,6 +538,8 @@ export default class Table {
         cell = this.getRow(rowIndex).appendChild(cellElem);
       }
 
+      this.setCellBackgroundColor(rowIndex, columnIndex > 0 ? columnIndex : numberOfColumns + 1, this.config.defaultBackgroundColor);
+
       /**
        * Autofocus first cell
        */
@@ -596,7 +598,7 @@ export default class Table {
       insertedRow = this.table.appendChild(rowElem);
     }
 
-    this.fillRow(insertedRow, numberOfColumns);
+    this.fillRow(insertedRow, numberOfColumns, index > 0 ? index : this.numberOfRows);
     this.copyColumnWidthsFromBlueprint(rowBlueprint, insertedRow);
 
     if (this.tunes.withHeadings) {
@@ -787,12 +789,14 @@ export default class Table {
    *
    * @param {HTMLElement} row - row to fill
    * @param {number} numberOfColumns - how many cells should be in a row
+   * @param {number} rowIndex - index of the row
    */
-  fillRow(row, numberOfColumns) {
+  fillRow(row, numberOfColumns, rowIndex) {
     for (let i = 1; i <= numberOfColumns; i++) {
       const newCell = this.createCell();
 
       row.appendChild(newCell);
+      this.setCellBackgroundColor(rowIndex, i, this.config.defaultBackgroundColor);
     }
   }
 

@@ -235,8 +235,9 @@ export default class Table {
      *
      * @param {HTMLElement} row - row to fill
      * @param {number} numberOfColumns - how many cells should be in a row
+     * @param {number} rowIndex - index of the row
      */
-    fillRow(row: HTMLElement, numberOfColumns: number): void;
+    fillRow(row: HTMLElement, numberOfColumns: number, rowIndex: number): void;
     /**
      * Creating a cell element
      *

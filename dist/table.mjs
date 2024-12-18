@@ -1,13 +1,13 @@
 (function(){var r;"use strict";try{if(typeof document<"u"){var o=document.createElement("style");o.nonce=(r=document.head.querySelector("meta[property=csp-nonce]"))==null?void 0:r.content,o.appendChild(document.createTextNode('.tc-wrap{--color-background:#f9f9fb;--color-text-secondary:#7b7e89;--color-border:#e5e7eb;--cell-size:34px;--toolbox-icon-size:18px;--toolbox-padding:6px;--toolbox-aiming-field-size:calc(var(--toolbox-icon-size) + var(--toolbox-padding)*2);border-left:0;position:relative;height:100%;width:100%;margin-top:var(--toolbox-icon-size);box-sizing:border-box;display:grid;grid-template-columns:calc(100% - var(--cell-size)) var(--cell-size)}.tc-wrap--readonly{grid-template-columns:100% var(--cell-size)}.tc-wrap svg{vertical-align:top}@media print{.tc-wrap{border-left-color:var(--color-border);border-left-style:solid;border-left-width:1px;grid-template-columns:100% var(--cell-size)}}@media print{.tc-wrap .tc-row:after{display:none}}.tc-table{position:relative;width:100%;height:100%;display:grid;font-size:14px;border-top:1px solid var(--color-border);line-height:1.4}.tc-table:after{width:calc(var(--cell-size));height:100%;left:calc(var(--cell-size)*-1);top:0}.tc-table:after,.tc-table:before{position:absolute;content:""}.tc-table:before{width:100%;height:var(--toolbox-aiming-field-size);top:calc(var(--toolbox-aiming-field-size)*-1);left:0}.tc-table--heading .tc-row:first-child{font-weight:600;border-bottom:2px solid var(--color-border)}.tc-table--heading .tc-row:first-child [contenteditable]:empty:before{content:attr(heading);color:var(--color-text-secondary)}.tc-table--heading .tc-row:first-child:after{bottom:-2px;border-bottom:2px solid var(--color-border)}.tc-add-column,.tc-add-row{display:flex;color:var(--color-text-secondary)}@media print{.tc-add{display:none}}.tc-add-column{padding:4px 0;justify-content:center;border-top:1px solid var(--color-border)}.tc-add-column--disabled{visibility:hidden}@media print{.tc-add-column{display:none}}.tc-add-row{height:var(--cell-size);align-items:center;padding-left:4px;position:relative}.tc-add-row--disabled{display:none}.tc-add-row:before{content:"";position:absolute;right:calc(var(--cell-size)*-1);width:var(--cell-size);height:100%}@media print{.tc-add-row{display:none}}.tc-add-column,.tc-add-row{transition:0s;cursor:pointer;will-change:background-color}.tc-add-column:hover,.tc-add-row:hover{transition:background-color .1s ease;background-color:var(--color-background)}.tc-add-row{margin-top:1px}.tc-add-row:hover:before{transition:.1s;background-color:var(--color-background)}.tc-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(10px,1fr));position:relative;border-bottom:1px solid var(--color-border)}.tc-row:after{content:"";pointer-events:none;position:absolute;width:var(--cell-size);height:100%;bottom:-1px;right:calc(var(--cell-size)*-1);border-bottom:1px solid var(--color-border)}.tc-row--selected{background:var(--color-background)}.tc-row--selected:after{background:var(--color-background)}.tc-cell{border-right:1px solid var(--color-border);padding:6px 12px;overflow:hidden;outline:none;line-break:normal}.tc-cell:first-child{border-left:1px solid var(--color-border)}.tc-cell--selected{background:var(--color-background)}.tc-wrap--readonly .tc-row:after{display:none}.tc-toolbox{--toolbox-padding:6px;--popover-margin:30px;--toggler-click-zone-size:30px;--toggler-dots-color:#7b7e89;--toggler-dots-color-hovered:#1d202b;position:absolute;cursor:pointer;z-index:1;opacity:0;transition:opacity .1s;will-change:left,opacity}.tc-toolbox--column{top:calc(var(--toggler-click-zone-size)*-1);transform:translate(calc(var(--toggler-click-zone-size)*-1/2));will-change:left,opacity}.tc-toolbox--row{left:calc(var(--popover-margin)*-1);transform:translateY(calc(var(--toggler-click-zone-size)*-1/2));margin-top:-1px;will-change:top,opacity}.tc-toolbox--showed{opacity:1}.tc-toolbox .tc-popover{position:absolute;top:0;left:var(--popover-margin)}.tc-toolbox__toggler{display:flex;align-items:center;justify-content:center;width:var(--toggler-click-zone-size);height:var(--toggler-click-zone-size);color:var(--toggler-dots-color);opacity:0;transition:opacity .15s ease;will-change:opacity}.tc-toolbox__toggler:hover{color:var(--toggler-dots-color-hovered)}.tc-toolbox__toggler svg{fill:currentColor}.tc-wrap:hover .tc-toolbox__toggler{opacity:1}.tc-settings .cdx-settings-button{width:50%;margin:0}.tc-popover{--color-border:#eaeaea;--color-background:#fff;--color-background-hover:rgba(232,232,235,.49);--color-background-confirm:#e24a4a;--color-background-confirm-hover:#d54040;--color-text-confirm:#fff;background:var(--color-background);border:1px solid var(--color-border);box-shadow:0 3px 15px -3px #0d142121;border-radius:6px;padding:6px;display:none;will-change:opacity,transform}.tc-popover--opened{display:block;animation:menuShowing .1s cubic-bezier(.215,.61,.355,1) forwards}.tc-popover__item{display:flex;align-items:center;padding:2px 14px 2px 2px;border-radius:5px;cursor:pointer;white-space:nowrap;-webkit-user-select:none;-moz-user-select:none;user-select:none}.tc-popover__item:hover{background:var(--color-background-hover)}.tc-popover__item:not(:last-of-type){margin-bottom:2px}.tc-popover__item-icon{display:inline-flex;width:26px;height:26px;align-items:center;justify-content:center;background:var(--color-background);border-radius:5px;border:1px solid var(--color-border);margin-right:8px}.tc-popover__item-label{line-height:22px;font-size:14px;font-weight:500}.tc-popover__item--confirm{background:var(--color-background-confirm);color:var(--color-text-confirm)}.tc-popover__item--confirm:hover{background-color:var(--color-background-confirm-hover)}.tc-popover__item--confirm .tc-popover__item-icon{background:var(--color-background-confirm);border-color:#0000001a}.tc-popover__item--confirm .tc-popover__item-icon svg{transition:transform .2s ease-in;transform:rotate(90deg) scale(1.2)}.tc-popover__item--hidden{display:none}@keyframes menuShowing{0%{opacity:0;transform:translateY(-8px) scale(.9)}70%{opacity:1;transform:translateY(2px)}to{transform:translateY(0)}}')),document.head.appendChild(o)}}catch(e){console.error("vite-plugin-css-injected-by-js",e)}})();
-function d(c, t, e = {}) {
-  const o = document.createElement(c);
+function d(a, t, e = {}) {
+  const o = document.createElement(a);
   Array.isArray(t) ? o.classList.add(...t) : t && o.classList.add(t);
   for (const i in e)
     Object.prototype.hasOwnProperty.call(e, i) && (o[i] = e[i]);
   return o;
 }
-function f(c) {
-  const t = c.getBoundingClientRect();
+function f(a) {
+  const t = a.getBoundingClientRect();
   return {
     y1: Math.floor(t.top + window.pageYOffset),
     x1: Math.floor(t.left + window.pageXOffset),
@@ -15,8 +15,8 @@ function f(c) {
     y2: Math.floor(t.bottom + window.pageYOffset)
   };
 }
-function C(c, t) {
-  const e = f(c), o = f(t);
+function C(a, t) {
+  const e = f(a), o = f(t);
   return {
     fromTopBorder: o.y1 - e.y1,
     fromLeftBorder: o.x1 - e.x1,
@@ -24,23 +24,23 @@ function C(c, t) {
     fromBottomBorder: e.y2 - o.y2
   };
 }
-function R(c, t) {
-  const e = c.getBoundingClientRect(), { width: o, height: i, x: r, y: s } = e, { clientX: h, clientY: n } = t;
+function x(a, t) {
+  const e = a.getBoundingClientRect(), { width: o, height: i, x: s, y: r } = e, { clientX: h, clientY: n } = t;
   return {
     width: o,
     height: i,
-    x: h - r,
-    y: n - s
+    x: h - s,
+    y: n - r
   };
 }
-function g(c, t) {
-  return t.parentNode.insertBefore(c, t);
+function g(a, t) {
+  return t.parentNode.insertBefore(a, t);
 }
-function m(c, t = !0) {
+function m(a, t = !0) {
   const e = document.createRange(), o = window.getSelection();
-  e.selectNodeContents(c), e.collapse(t), o.removeAllRanges(), o.addRange(e);
+  e.selectNodeContents(a), e.collapse(t), o.removeAllRanges(), o.addRange(e);
 }
-class a {
+class c {
   /**
    * @param {object} options - constructor options
    * @param {PopoverItem[]} options.items - constructor options
@@ -70,13 +70,13 @@ class a {
    * @returns {Element}
    */
   render() {
-    return this.wrapper = d("div", a.CSS.popover), this.items.forEach((t, e) => {
-      const o = d("div", a.CSS.item), i = d("div", a.CSS.itemIcon, {
+    return this.wrapper = d("div", c.CSS.popover), this.items.forEach((t, e) => {
+      const o = d("div", c.CSS.item), i = d("div", c.CSS.itemIcon, {
         innerHTML: t.icon
-      }), r = d("div", a.CSS.itemLabel, {
+      }), s = d("div", c.CSS.itemLabel, {
         textContent: t.label
       });
-      o.dataset.index = e, o.appendChild(i), o.appendChild(r), this.wrapper.appendChild(o), this.itemEls.push(o);
+      o.dataset.index = e, o.appendChild(i), o.appendChild(s), this.wrapper.appendChild(o), this.itemEls.push(o);
     }), this.wrapper.addEventListener("click", (t) => {
       this.popoverClicked(t);
     }), this.wrapper;
@@ -88,7 +88,7 @@ class a {
    * @returns {void}
    */
   popoverClicked(t) {
-    const e = t.target.closest(`.${a.CSS.item}`);
+    const e = t.target.closest(`.${c.CSS.item}`);
     if (!e)
       return;
     const o = e.dataset.index, i = this.items[o];
@@ -104,7 +104,7 @@ class a {
    * @returns {void}
    */
   setConfirmationState(t) {
-    t.classList.add(a.CSS.itemConfirmState);
+    t.classList.add(c.CSS.itemConfirmState);
   }
   /**
    * Disable the confirmation state on passed item
@@ -112,7 +112,7 @@ class a {
    * @returns {void}
    */
   clearConfirmationState(t) {
-    t.classList.remove(a.CSS.itemConfirmState);
+    t.classList.remove(c.CSS.itemConfirmState);
   }
   /**
    * Check if passed item has the confirmation state
@@ -120,7 +120,7 @@ class a {
    * @returns {boolean}
    */
   hasConfirmationState(t) {
-    return t.classList.contains(a.CSS.itemConfirmState);
+    return t.classList.contains(c.CSS.itemConfirmState);
   }
   /**
    * Return an opening state
@@ -128,7 +128,7 @@ class a {
    * @returns {boolean}
    */
   get opened() {
-    return this.wrapper.classList.contains(a.CSS.popoverOpened);
+    return this.wrapper.classList.contains(c.CSS.popoverOpened);
   }
   /**
    * Opens the popover
@@ -137,8 +137,8 @@ class a {
    */
   open() {
     this.items.forEach((t, e) => {
-      typeof t.hideIf == "function" && this.itemEls[e].classList.toggle(a.CSS.itemHidden, t.hideIf());
-    }), this.wrapper.classList.add(a.CSS.popoverOpened);
+      typeof t.hideIf == "function" && this.itemEls[e].classList.toggle(c.CSS.itemHidden, t.hideIf());
+    }), this.wrapper.classList.add(c.CSS.popoverOpened);
   }
   /**
    * Closes the popover
@@ -146,12 +146,12 @@ class a {
    * @returns {void}
    */
   close() {
-    this.wrapper.classList.remove(a.CSS.popoverOpened), this.itemEls.forEach((t) => {
+    this.wrapper.classList.remove(c.CSS.popoverOpened), this.itemEls.forEach((t) => {
       this.clearConfirmationState(t);
     });
   }
 }
-const S = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 19V19C9.13623 19 8.20435 19 7.46927 18.6955C6.48915 18.2895 5.71046 17.5108 5.30448 16.5307C5 15.7956 5 14.8638 5 13V12C5 9.19108 5 7.78661 5.67412 6.77772C5.96596 6.34096 6.34096 5.96596 6.77772 5.67412C7.78661 5 9.19108 5 12 5H13.5C14.8956 5 15.5933 5 16.1611 5.17224C17.4395 5.56004 18.44 6.56046 18.8278 7.83886C19 8.40666 19 9.10444 19 10.5V10.5"/><path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M16 13V16M16 19V16M19 16H16M16 16H13"/><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6.5 17.5L17.5 6.5"/><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.9919 10.5H19.0015"/><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.9919 19H11.0015"/><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13L13 5"/></svg>', v = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 9L10 12M10 12L7 15M10 12H4"/><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9L14 12M14 12L17 15M14 12H20"/></svg>', b = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M8 8L12 12M12 12L16 16M12 12L16 8M12 12L8 16"/></svg>', y = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.8833 9.16666L18.2167 12.5M18.2167 12.5L14.8833 15.8333M18.2167 12.5H10.05C9.16594 12.5 8.31809 12.1488 7.69297 11.5237C7.06785 10.8986 6.71666 10.0507 6.71666 9.16666"/></svg>', M = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.9167 14.9167L11.5833 18.25M11.5833 18.25L8.25 14.9167M11.5833 18.25L11.5833 10.0833C11.5833 9.19928 11.9345 8.35143 12.5596 7.72631C13.1848 7.10119 14.0326 6.75 14.9167 6.75"/></svg>', L = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.13333 14.9167L12.4667 18.25M12.4667 18.25L15.8 14.9167M12.4667 18.25L12.4667 10.0833C12.4667 9.19928 12.1155 8.35143 11.4904 7.72631C10.8652 7.10119 10.0174 6.75 9.13333 6.75"/></svg>', T = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.8833 15.8333L18.2167 12.5M18.2167 12.5L14.8833 9.16667M18.2167 12.5L10.05 12.5C9.16595 12.5 8.31811 12.8512 7.69299 13.4763C7.06787 14.1014 6.71667 14.9493 6.71667 15.8333"/></svg>', O = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="2.6" d="M9.41 9.66H9.4"/><path stroke="currentColor" stroke-linecap="round" stroke-width="2.6" d="M14.6 9.66H14.59"/><path stroke="currentColor" stroke-linecap="round" stroke-width="2.6" d="M9.31 14.36H9.3"/><path stroke="currentColor" stroke-linecap="round" stroke-width="2.6" d="M14.6 14.36H14.59"/></svg>', k = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M12 7V12M12 17V12M17 12H12M12 12H7"/></svg>', x = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9L20 12L17 15"/><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 12H20"/><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 9L4 12L7 15"/><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 12H10"/></svg>', H = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-width="2" d="M5 10H19"/><rect width="14" height="14" x="5" y="5" stroke="currentColor" stroke-width="2" rx="4"/></svg>', B = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-width="2" d="M10 5V18.5"/><path stroke="currentColor" stroke-width="2" d="M14 5V18.5"/><path stroke="currentColor" stroke-width="2" d="M5 10H19"/><path stroke="currentColor" stroke-width="2" d="M5 14H19"/><rect width="14" height="14" x="5" y="5" stroke="currentColor" stroke-width="2" rx="4"/></svg>', A = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-width="2" d="M10 5V18.5"/><path stroke="currentColor" stroke-width="2" d="M5 10H19"/><rect width="14" height="14" x="5" y="5" stroke="currentColor" stroke-width="2" rx="4"/></svg>';
+const S = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 19V19C9.13623 19 8.20435 19 7.46927 18.6955C6.48915 18.2895 5.71046 17.5108 5.30448 16.5307C5 15.7956 5 14.8638 5 13V12C5 9.19108 5 7.78661 5.67412 6.77772C5.96596 6.34096 6.34096 5.96596 6.77772 5.67412C7.78661 5 9.19108 5 12 5H13.5C14.8956 5 15.5933 5 16.1611 5.17224C17.4395 5.56004 18.44 6.56046 18.8278 7.83886C19 8.40666 19 9.10444 19 10.5V10.5"/><path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M16 13V16M16 19V16M19 16H16M16 16H13"/><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6.5 17.5L17.5 6.5"/><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.9919 10.5H19.0015"/><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.9919 19H11.0015"/><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13L13 5"/></svg>', v = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 9L10 12M10 12L7 15M10 12H4"/><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9L14 12M14 12L17 15M14 12H20"/></svg>', b = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M8 8L12 12M12 12L16 16M12 12L16 8M12 12L8 16"/></svg>', y = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.8833 9.16666L18.2167 12.5M18.2167 12.5L14.8833 15.8333M18.2167 12.5H10.05C9.16594 12.5 8.31809 12.1488 7.69297 11.5237C7.06785 10.8986 6.71666 10.0507 6.71666 9.16666"/></svg>', M = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.9167 14.9167L11.5833 18.25M11.5833 18.25L8.25 14.9167M11.5833 18.25L11.5833 10.0833C11.5833 9.19928 11.9345 8.35143 12.5596 7.72631C13.1848 7.10119 14.0326 6.75 14.9167 6.75"/></svg>', L = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.13333 14.9167L12.4667 18.25M12.4667 18.25L15.8 14.9167M12.4667 18.25L12.4667 10.0833C12.4667 9.19928 12.1155 8.35143 11.4904 7.72631C10.8652 7.10119 10.0174 6.75 9.13333 6.75"/></svg>', T = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.8833 15.8333L18.2167 12.5M18.2167 12.5L14.8833 9.16667M18.2167 12.5L10.05 12.5C9.16595 12.5 8.31811 12.8512 7.69299 13.4763C7.06787 14.1014 6.71667 14.9493 6.71667 15.8333"/></svg>', O = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="2.6" d="M9.41 9.66H9.4"/><path stroke="currentColor" stroke-linecap="round" stroke-width="2.6" d="M14.6 9.66H14.59"/><path stroke="currentColor" stroke-linecap="round" stroke-width="2.6" d="M9.31 14.36H9.3"/><path stroke="currentColor" stroke-linecap="round" stroke-width="2.6" d="M14.6 14.36H14.59"/></svg>', k = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M12 7V12M12 17V12M17 12H12M12 12H7"/></svg>', R = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9L20 12L17 15"/><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 12H20"/><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 9L4 12L7 15"/><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 12H10"/></svg>', H = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-width="2" d="M5 10H19"/><rect width="14" height="14" x="5" y="5" stroke="currentColor" stroke-width="2" rx="4"/></svg>', B = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-width="2" d="M10 5V18.5"/><path stroke="currentColor" stroke-width="2" d="M14 5V18.5"/><path stroke="currentColor" stroke-width="2" d="M5 10H19"/><path stroke="currentColor" stroke-width="2" d="M5 14H19"/><rect width="14" height="14" x="5" y="5" stroke="currentColor" stroke-width="2" rx="4"/></svg>', A = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-width="2" d="M10 5V18.5"/><path stroke="currentColor" stroke-width="2" d="M5 10H19"/><rect width="14" height="14" x="5" y="5" stroke="currentColor" stroke-width="2" rx="4"/></svg>';
 class w {
   /**
    * Creates toolbox buttons and toolbox menus
@@ -163,8 +163,8 @@ class w {
    * @param {function} config.onClose - callback fired when the Popover is closing
    * @param {string} config.cssModifier - the modifier for the Toolbox. Allows to add some specific styles.
    */
-  constructor({ api: t, items: e, onOpen: o, onClose: i, cssModifier: r = "" }) {
-    this.api = t, this.items = e, this.onOpen = o, this.onClose = i, this.cssModifier = r, this.popover = null, this.wrapper = this.createToolbox();
+  constructor({ api: t, items: e, onOpen: o, onClose: i, cssModifier: s = "" }) {
+    this.api = t, this.items = e, this.onOpen = o, this.onClose = i, this.cssModifier = s, this.popover = null, this.wrapper = this.createToolbox();
   }
   /**
    * Style classes
@@ -215,7 +215,7 @@ class w {
    * @returns {Element}
    */
   createPopover() {
-    return this.popover = new a({
+    return this.popover = new c({
       items: this.items
     }), this.popover.render();
   }
@@ -248,11 +248,11 @@ class w {
     this.popover.close(), this.wrapper.classList.remove(w.CSS.toolboxShowed);
   }
 }
-function E(c, t) {
+function E(a, t) {
   let e = 0;
   return function(...o) {
     const i = (/* @__PURE__ */ new Date()).getTime();
-    if (!(i - e < c))
+    if (!(i - e < a))
       return e = i, t(...o);
   };
 }
@@ -286,10 +286,10 @@ class $ {
     }, this.resize(), this.fill(), this.focusedCell = {
       row: 0,
       column: 0
-    }, this.documentClicked = (r) => {
-      const s = r.target.closest(`.${l.table}`) !== null, h = r.target.closest(`.${l.wrapper}`) === null;
-      (s || h) && this.hideToolboxes();
-      const u = r.target.closest(`.${l.addRow}`), p = r.target.closest(`.${l.addColumn}`);
+    }, this.documentClicked = (s) => {
+      const r = s.target.closest(`.${l.table}`) !== null, h = s.target.closest(`.${l.wrapper}`) === null;
+      (r || h) && this.hideToolboxes();
+      const u = s.target.closest(`.${l.addRow}`), p = s.target.closest(`.${l.addColumn}`);
       u && u.parentNode === this.wrapper ? (this.addRow(void 0, !0), this.hideToolboxes()) : p && p.parentNode === this.wrapper && (this.addColumn(void 0, !0), this.hideToolboxes());
     }, this.readOnly || this.bindEvents();
   }
@@ -344,7 +344,7 @@ class $ {
         },
         {
           label: this.api.i18n.t("Increase Width"),
-          icon: x,
+          icon: R,
           onClick: () => {
             this.increaseWidth(this.selectedColumn), this.hideToolboxes();
           }
@@ -388,8 +388,8 @@ class $ {
     this.adjustColumnWidths();
   }
   setCellWidth({ row: t, column: e, adjustedWidth: o = 0, defaultWidth: i = 1 }) {
-    const r = this.getCell(t, e), s = parseFloat(r.dataset.width) || parseFloat(i);
-    r.dataset.width = Math.max(s + parseFloat(o), 0.1);
+    const s = this.getCell(t, e), r = parseFloat(s.dataset.width) || parseFloat(i);
+    s.dataset.width = Math.max(r + parseFloat(o), 0.1);
   }
   /**
    * Adjust the widths of all columns in the table to be displayed
@@ -400,8 +400,8 @@ class $ {
     for (let t = 1; t <= this.numberOfRows; t++) {
       const e = this.getRow(t), o = [];
       for (let i = 1; i <= this.numberOfColumns; i++) {
-        const s = this.getCell(t, i).dataset.width || 1;
-        o.push(`${s}fr`);
+        const r = this.getCell(t, i).dataset.width || 1;
+        o.push(`${r}fr`);
       }
       e.style.gridTemplateColumns = o.join(" ");
     }
@@ -554,20 +554,20 @@ class $ {
    * @param {boolean} [setFocus] - pass true to focus the first cell
    */
   addColumn(t = -1, e = !1) {
-    var r;
+    var s;
     let o = this.numberOfColumns;
     if (this.config && this.config.maxcols && this.numberOfColumns >= this.config.maxcols)
       return;
-    for (let s = 1; s <= this.numberOfRows; s++) {
+    for (let r = 1; r <= this.numberOfRows; r++) {
       let h;
       const n = this.createCell();
-      if (t > 0 && t <= o ? (h = this.getCell(s, t), g(n, h)) : h = this.getRow(s).appendChild(n), s === 1) {
-        const u = this.getCell(s, t > 0 ? t : o + 1);
+      if (t > 0 && t <= o ? (h = this.getCell(r, t), g(n, h)) : h = this.getRow(r).appendChild(n), this.setCellBackgroundColor(r, t > 0 ? t : o + 1, this.config.defaultBackgroundColor), r === 1) {
+        const u = this.getCell(r, t > 0 ? t : o + 1);
         u && e && m(u);
       }
     }
     const i = this.wrapper.querySelector(`.${l.addColumn}`);
-    (r = this.config) != null && r.maxcols && this.numberOfColumns > this.config.maxcols - 1 && i && i.classList.add(l.addColumnDisabled), this.addHeadingAttrToFirstRow(), this.adjustColumnWidths();
+    (s = this.config) != null && s.maxcols && this.numberOfColumns > this.config.maxcols - 1 && i && i.classList.add(l.addColumnDisabled), this.addHeadingAttrToFirstRow(), this.adjustColumnWidths();
   }
   /**
    * Add row in table on index place
@@ -578,9 +578,9 @@ class $ {
    */
   addRow(t = -1, e = !1) {
     let o, i = d("div", l.row);
-    const r = this.getRow(1);
+    const s = this.getRow(1);
     this.tunes.withHeadings && this.removeHeadingAttrFromFirstRow();
-    let s = this.numberOfColumns;
+    let r = this.numberOfColumns;
     if (this.config && this.config.maxrows && this.numberOfRows >= this.config.maxrows && n)
       return;
     if (t > 0 && t <= this.numberOfRows) {
@@ -588,7 +588,7 @@ class $ {
       o = g(i, u);
     } else
       o = this.table.appendChild(i);
-    this.fillRow(o, s), this.copyColumnWidthsFromBlueprint(r, o), this.tunes.withHeadings && this.addHeadingAttrToFirstRow();
+    this.fillRow(o, r, t > 0 ? t : this.numberOfRows), this.copyColumnWidthsFromBlueprint(s, o), this.tunes.withHeadings && this.addHeadingAttrToFirstRow();
     const h = this.getRowFirstCell(o);
     h && e && m(h);
     const n = this.wrapper.querySelector(`.${l.addRow}`);
@@ -604,8 +604,8 @@ class $ {
     if (!t || !e)
       return;
     const o = t.querySelectorAll(`.${l.cell}`), i = e.querySelectorAll(`.${l.cell}`);
-    o.forEach((r, s) => {
-      r.dataset.width && (i[s].dataset.width = r.dataset.width);
+    o.forEach((s, r) => {
+      s.dataset.width && (i[r].dataset.width = s.dataset.width);
     });
   }
   /**
@@ -655,10 +655,10 @@ class $ {
    * @return {{rows: number, cols: number}} - number of cols and rows
    */
   computeInitialSize() {
-    const t = this.data && this.data.content, e = Array.isArray(t), o = e ? t.length : !1, i = e ? t.length : void 0, r = o ? t[0].length : void 0, s = Number.parseInt(this.config && this.config.rows), h = Number.parseInt(this.config && this.config.cols), n = !isNaN(s) && s > 0 ? s : void 0, u = !isNaN(h) && h > 0 ? h : void 0;
+    const t = this.data && this.data.content, e = Array.isArray(t), o = e ? t.length : !1, i = e ? t.length : void 0, s = o ? t[0].length : void 0, r = Number.parseInt(this.config && this.config.rows), h = Number.parseInt(this.config && this.config.cols), n = !isNaN(r) && r > 0 ? r : void 0, u = !isNaN(h) && h > 0 ? h : void 0;
     return {
       rows: i || n || 2,
-      cols: r || u || 2
+      cols: s || u || 2
     };
   }
   /**
@@ -694,11 +694,12 @@ class $ {
    *
    * @param {HTMLElement} row - row to fill
    * @param {number} numberOfColumns - how many cells should be in a row
+   * @param {number} rowIndex - index of the row
    */
-  fillRow(t, e) {
-    for (let o = 1; o <= e; o++) {
-      const i = this.createCell();
-      t.appendChild(i);
+  fillRow(t, e, o) {
+    for (let i = 1; i <= e; i++) {
+      const s = this.createCell();
+      t.appendChild(s), this.setCellBackgroundColor(o, i, this.config.defaultBackgroundColor);
     }
   }
   /**
@@ -843,21 +844,21 @@ class $ {
    */
   updateToolboxesPosition(t = this.hoveredRow, e = this.hoveredColumn) {
     if (!this.isColumnMenuShowing && e > 0 && e <= this.numberOfColumns) {
-      const o = this.getCell(1, e), { fromLeftBorder: i } = C(this.table, o), { width: r } = o.getBoundingClientRect();
+      const o = this.getCell(1, e), { fromLeftBorder: i } = C(this.table, o), { width: s } = o.getBoundingClientRect();
       this.toolboxColumn.show(() => ({
-        left: `${i + r / 2}px`
+        left: `${i + s / 2}px`
       }));
     }
     if (this.isRowMenuShowing || t > 0 && t <= this.numberOfRows && this.toolboxRow.show(() => {
-      const o = this.getRow(t), { fromTopBorder: i } = C(this.table, o), { height: r } = o.getBoundingClientRect();
+      const o = this.getRow(t), { fromTopBorder: i } = C(this.table, o), { height: s } = o.getBoundingClientRect();
       return {
-        top: `${Math.ceil(i + r / 2)}px`
+        top: `${Math.ceil(i + s / 2)}px`
       };
     }), this.isCellMenuShowing) {
-      const o = this.focusedCellElem, i = o.getBoundingClientRect(), r = this.toolboxCell.element.getBoundingClientRect(), { fromTopBorder: s, fromLeftBorder: h } = C(this.table, o);
+      const o = this.focusedCellElem, i = o.getBoundingClientRect(), s = this.toolboxCell.element.getBoundingClientRect(), { fromTopBorder: r, fromLeftBorder: h } = C(this.table, o);
       this.toolboxCell.show(() => ({
-        top: `${s}px`,
-        left: `${h + i.width - r.width}px`
+        top: `${r}px`,
+        left: `${h + i.width - s.width}px`
       }));
     }
   }
@@ -937,17 +938,17 @@ class $ {
    */
   getHoveredCell(t) {
     let e = this.hoveredRow, o = this.hoveredColumn;
-    const { width: i, height: r, x: s, y: h } = R(this.table, t);
-    return s >= 0 && (o = this.binSearch(
+    const { width: i, height: s, x: r, y: h } = x(this.table, t);
+    return r >= 0 && (o = this.binSearch(
       this.numberOfColumns,
       (n) => this.getCell(1, n),
-      ({ fromLeftBorder: n }) => s < n,
-      ({ fromRightBorder: n }) => s > i - n
+      ({ fromLeftBorder: n }) => r < n,
+      ({ fromRightBorder: n }) => r > i - n
     )), h >= 0 && (e = this.binSearch(
       this.numberOfRows,
       (n) => this.getCell(n, 1),
       ({ fromTopBorder: n }) => h < n,
-      ({ fromBottomBorder: n }) => h > r - n
+      ({ fromBottomBorder: n }) => h > s - n
     )), {
       row: e || this.hoveredRow,
       column: o || this.hoveredColumn
@@ -965,14 +966,14 @@ class $ {
    * @returns {number}
    */
   binSearch(t, e, o, i) {
-    let r = 0, s = t + 1, h = 0, n;
-    for (; r < s - 1 && h < 10; ) {
-      n = Math.ceil((r + s) / 2);
+    let s = 0, r = t + 1, h = 0, n;
+    for (; s < r - 1 && h < 10; ) {
+      n = Math.ceil((s + r) / 2);
       const u = e(n), p = C(this.table, u);
       if (o(p))
-        s = n;
-      else if (i(p))
         r = n;
+      else if (i(p))
+        s = n;
       else
         break;
       h++;
@@ -988,9 +989,9 @@ class $ {
     const t = [];
     for (let e = 1; e <= this.numberOfRows; e++) {
       const o = this.table.querySelector(`.${l.row}:nth-child(${e})`), i = Array.from(o.querySelectorAll(`.${l.cell}`));
-      i.every((s) => !s.textContent.trim()) || t.push(i.map((s) => {
-        const h = { content: s.innerHTML };
-        return s.dataset.backgroundColor && (h.backgroundColor = s.dataset.backgroundColor), s.dataset.width && (h.width = s.dataset.width), h;
+      i.every((r) => !r.textContent.trim()) || t.push(i.map((r) => {
+        const h = { content: r.innerHTML };
+        return r.dataset.backgroundColor && (h.backgroundColor = r.dataset.backgroundColor), r.dataset.width && (h.width = r.dataset.width), h;
       }));
     }
     return t;
@@ -1025,12 +1026,12 @@ class q {
    *
    * @param {TableConstructor} init
    */
-  constructor({ data: t, config: e, api: o, readOnly: i, block: r }) {
+  constructor({ data: t, config: e, api: o, readOnly: i, block: s }) {
     this.api = o, this.readOnly = i, this.config = e, this.data = {
       withHeadings: this.getConfig("withHeadings", !1, t),
       stretched: this.getConfig("stretched", !1, t),
       content: t && t.content ? t.content : []
-    }, this.table = null, this.block = r;
+    }, this.table = null, this.block = s;
   }
   /**
    * Get Tool toolbox settings
@@ -1082,7 +1083,7 @@ class q {
       },
       {
         label: this.data.stretched ? this.api.i18n.t("Collapse") : this.api.i18n.t("Stretch"),
-        icon: this.data.stretched ? v : x,
+        icon: this.data.stretched ? v : R,
         closeOnActivate: !0,
         toggle: !0,
         onActivate: () => {
@@ -1138,10 +1139,10 @@ class q {
    * @param {PasteEvent} event - event with pasted data
    */
   onPaste(t) {
-    const e = t.detail.data, o = e.querySelector(":scope > thead, tr:first-of-type th"), r = Array.from(e.querySelectorAll("tr")).map((s) => Array.from(s.querySelectorAll("th, td")).map((n) => n.innerHTML));
+    const e = t.detail.data, o = e.querySelector(":scope > thead, tr:first-of-type th"), s = Array.from(e.querySelectorAll("tr")).map((r) => Array.from(r.querySelectorAll("th, td")).map((n) => n.innerHTML));
     this.data = {
       withHeadings: o !== null,
-      content: r
+      content: s
     }, this.table.wrapper && this.table.wrapper.replaceWith(this.render());
   }
 }

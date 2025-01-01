@@ -2,7 +2,7 @@
 .tc-wrap {
   --color-background: #f9f9fb;
   --color-text-secondary: #7b7e89;
-  --color-border: #e8e8eb;
+  --color-border: #e5e7eb;
   --cell-size: 34px;
   --toolbox-icon-size: 18px;
   --toolbox-padding: 6px;
@@ -188,6 +188,10 @@
   overflow: hidden;
   outline: none;
   line-break: normal;
+
+  &:first-child {
+    border-left: 1px solid var(--color-border);
+  }
 
   &--selected {
     background: var(--color-background);

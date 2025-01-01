@@ -2,31 +2,7 @@ import Table from './table';
 import * as $ from './utils/dom';
 
 import { IconTable, IconTableWithHeadings, IconTableWithoutHeadings, IconStretch, IconCollapse } from '@codexteam/icons';
-/**
- * @typedef {object} TableData - configuration that the user can set for the table
- * @property {number} rows - number of rows in the table
- * @property {number} cols - number of columns in the table
- */
-/**
- * @typedef {object} Tune - setting for the table
- * @property {string} name - tune name
- * @property {HTMLElement} icon - icon for the tune
- * @property {boolean} isActive - default state of the tune
- * @property {void} setTune - set tune state to the table data
- */
-/**
- * @typedef {object} TableConfig - object with the data transferred to form a table
- * @property {boolean} withHeading - setting to use cells of the first row as headings
- * @property {string[]} presetColors - array of preset colors
- * @property {string[][]} content - two-dimensional array which contains table content
- */
-/**
- * @typedef {object} TableConstructor
- * @property {TableConfig} data — previously saved data
- * @property {TableConfig} config - user config for Tool
- * @property {object} api - Editor.js API
- * @property {boolean} readOnly - read-only mode flag
- */
+
 /**
  * @typedef {import('@editorjs/editorjs').PasteEvent} PasteEvent
  */
@@ -69,6 +45,7 @@ export default class TableBlock {
       stretched: this.getConfig('stretched', false, data),
       content: data && data.content ? data.content : []
     };
+
     this.table = null;
     this.block = block;
   }
